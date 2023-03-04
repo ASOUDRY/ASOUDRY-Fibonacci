@@ -1,5 +1,22 @@
 
 public class Fibonacci {
+    public int fib(int n){
+        int first = 0;
+        int second = 1;
+        int target = 0;
+
+        if (n == 1) {
+        	return 1;
+        }
+        
+        for (int i = 1; i < n; i++) {
+        	  target = first + second;
+              first = second;
+              second = target;
+        }
+        return target;
+    }
+}
     /**
      * Return the nth number of fibonacci sequence.
      * The fibonacci sequence is calculated by adding the previous two numbers in the sequence to obtain the next
@@ -14,7 +31,4 @@ public class Fibonacci {
      * @param n an iteration of the fibonacci sequence.
      * @return the nth number of fibonacci sequence.
      */
-    public int fib(int n){
-        return 0;
-    }
-}
+    
